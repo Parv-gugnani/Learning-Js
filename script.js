@@ -26,8 +26,8 @@ captureConsoleOutput();
 
 let message = "Hello world!";
 const pi = 3.14159; //float //cant be changed it is truth that why we store in constants
-let name = "John"; //string
-let age = 30; //int
+let nname = "John"; //string
+let aage = 30; //int
 let isStudent = true; //boolean
 let frut = ["apple", "banana", "orange"]; //array
 let purson = { name: "John", age: 30, isStudent: true }; //object
@@ -122,16 +122,16 @@ when dealing with callbacks and avoiding issues with the this
  keyword in traditional function expressions.
 */
 // Using arrow function
-const obj = {
-  data: 42,
-  getData: function () {
-    setTimeout(() => {
-      console.log(this.data);
-    }, 100);
-  },
-};
+// const obj = {
+//   data: 42,
+//   getData: function () {
+//     setTimeout(() => {
+//       console.log(this.data);
+//     }, 100);
+//   },
+// };
 
-obj.getData();
+// obj.getData();
 
 // Scope
 
@@ -157,3 +157,36 @@ const paragraph = document.getElementById("myParagraph");
 
 // Change the text content of the paragraph
 paragraph.textContent = "This text was modified by JavaScript!";
+
+// Conditional (Ternary) Operator
+
+let age = 25;
+let isAdult = age >= 18 ? "Adult" : "Minor";
+// we are using  >=  because it is comparing firstly and we dont need to add the bracket
+//this is simple and effective
+console.log(isAdult);
+
+// Truthy and Falsy Values
+let name = "";
+
+// Common falsy values include 0, null, undefined, false, NaN, and an empty string ("").
+if (name) {
+  console.log("Truthy value");
+} else {
+  console.log("Falsy value");
+  //it is same as boolean
+}
+
+// loops with array and object
+
+let numbers = [1, 2, 3, 4, 5];
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+let Parv = { name: "Parv", age: 18, occupation: "berozgar" };
+for (let key in Parv) {
+  console.log(key + ": " + Parv[key]);
+}
+
+// array methos

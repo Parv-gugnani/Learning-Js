@@ -59,6 +59,13 @@ button:hover {
   background-color: #222;
   border: 2px solid #ffa500;
   overflow-y: auto;
+
+  /* Customize scrollbar for WebKit-based browsers (Chrome, Edge, Safari) */
+  scrollbar-color: #ffa500 #222; /* Thumb and track colors */
+  scrollbar-width: thin; /* Width of the scrollbar */
+
+  /* Customize scrollbar for Firefox */
+  scrollbar-color: #ffa500 #222; /* Thumb and track colors */
 }
 
 .cl {
@@ -68,4 +75,26 @@ button:hover {
 
 .onpage {
   color: #facf97;
+}
+
+/*  */
+
+/* Customize scrollbar for WebKit-based browsers (Chrome, Edge, Safari) */
+#consoleOutput::-webkit-scrollbar {
+  width: 10px;
+}
+
+#consoleOutput::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+#consoleOutput::-webkit-scrollbar-thumb {
+  background-color: #ffa500;
+  border-radius: 5px;
+}
+
+/* Customize scrollbar for Firefox (Gecko-based browsers) */
+#consoleOutput {
+  scrollbar-width: thin;
+  scrollbar-color: #ffa500 #222;
 }
