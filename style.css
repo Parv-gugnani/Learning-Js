@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 40px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* Button Styles */
+button {
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffa500;
+}
+
+/* Page-Specific Styles */
+#myButton {
+  display: block;
+  margin: 0 auto;
+}

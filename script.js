@@ -1,3 +1,29 @@
+// Function to capture console logs and display them on the page
+function captureConsoleOutput() {
+  const consoleOutputDiv = document.getElementById("consoleOutput");
+
+  // Save the original console.log function to a variable
+  const originalConsoleLog = console.log;
+
+  // Override console.log to capture the output and display it on the page
+  console.log = function (...args) {
+    // Call the original console.log function to output to the browser's console
+    originalConsoleLog.apply(console, args);
+
+    // Create a new paragraph element to display the log message
+    const logElement = document.createElement("p");
+    logElement.textContent = args.join(" ");
+
+    // Append the log message to the consoleOutputDiv
+    consoleOutputDiv.appendChild(logElement);
+  };
+}
+
+// Call the captureConsoleOutput function to start capturing console logs
+captureConsoleOutput();
+
+// Console output
+
 let message = "Hello world!";
 const pi = 3.14159; //float //cant be changed it is truth that why we store in constants
 let name = "John"; //string
