@@ -189,4 +189,4 @@ for (let key in Parv) {
   console.log(key + ": " + Parv[key]);
 }
 
-// array methos
+// array method
