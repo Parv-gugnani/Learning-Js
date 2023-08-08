@@ -151,3 +151,9 @@ const button = document.getElementById("myButton");
 button.addEventListener("click", function () {
   console.log("Button clicked");
 });
+
+// dom manipulation
+const paragraph = document.getElementById("myParagraph");
+
+// Change the text content of the paragraph
+paragraph.textContent = "This text was modified by JavaScript!";

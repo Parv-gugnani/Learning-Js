@@ -1,4 +1,4 @@
-/* styles.css */
+/* style.css */
 
 /* Global Styles */
 body {
@@ -13,11 +13,13 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  position: relative;
 }
 
 h1,
 h2 {
   text-align: center;
+  margin: 0;
 }
 
 h1 {
@@ -43,11 +45,27 @@ button {
 }
 
 button:hover {
-  background-color: #ffa500;
+  background-color: #ff9000;
 }
 
 /* Page-Specific Styles */
-#myButton {
-  display: block;
-  margin: 0 auto;
+#consoleOutput {
+  position: fixed;
+  top: 85px;
+  right: 20px;
+  width: 300px;
+  height: 650px;
+  padding: 10px;
+  background-color: #222;
+  border: 2px solid #ffa500;
+  overflow-y: auto;
+}
+
+.cl {
+  color: #ffa500;
+  margin: 0;
+}
+
+.onpage {
+  color: #facf97;
 }
