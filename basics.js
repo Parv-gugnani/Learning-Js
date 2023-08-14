@@ -190,3 +190,80 @@ for (let key in Parv) {
 }
 
 // array method
+let fut = ["apple", "banana", "orange"];
+
+// Adding elements to the array
+fut.push("grape"); // Adds "grape" to the end of the array
+fut.unshift("kiwi"); // Adds "kiwi" to the beginning of the array
+
+// Removing elements from the array
+fut.pop(); // Removes the last element ("grape") from the array
+fut.shift(); // Removes the first element ("kiwi") from the array
+
+// Slicing an array
+let slicedFruits = fut.slice(1, 3);
+// Returns a new array containing elements at index 1 and 2 ("banana", "orange")
+
+// Mapping an array
+let uppercasedFruits = fut.map((fruit) => fruit.toUpperCase());
+
+// Filtering an array
+let filteredFruits = fut.filter((fruit) => fruit.length > 5);
+
+console.log(fut);
+
+//Asynchronous Programming
+//using callback
+function fetchData(callback) {
+  setTimeout(() => {
+    let data = "some data from he server";
+    callback(data);
+  }, 2000);
+}
+
+fetchData((data) => {
+  console.log(data);
+});
+
+// // Using Promises
+// function fetchData() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       let data = "Some data from the server";
+//       resolve(data);
+//     }, 2000);
+//   });
+// }
+
+// fetchData().then((data) => {
+//   console.log(data);
+
+// // Using async/await
+// async function fetchData() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       let data = "Some data from the server";
+//       resolve(data);
+//     }, 2000);
+//   });
+// }
+
+// async function getData() {
+//   let data = await fetchData();
+//   console.log(data);
+// }
+
+// getData();
+// Classes and Object-Oriented Programming (OOP)  -->
+class parv {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  greet() {
+    console.log(`hello my name is ${this.name} and i am ${this.age} year old`);
+  }
+}
+
+const mia = new person("Mia", 30);
+john.greet();
