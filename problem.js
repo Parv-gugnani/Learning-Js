@@ -1,3 +1,4 @@
+console.log("This is Problem Solving Script: --------->");
 /*
 Declare a variable called 'message' and assign the string "Hello, world!" to it. 
 Then, use 'console.log' to print the value of 'message' to the console.

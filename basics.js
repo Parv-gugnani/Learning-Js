@@ -23,6 +23,7 @@ function captureConsoleOutput() {
 captureConsoleOutput();
 
 // Console output
+console.log("This is basic Console :");
 
 let message = "Hello world!";
 const pi = 3.14159; //float //cant be changed it is truth that why we store in constants
@@ -214,16 +215,16 @@ console.log(fut);
 
 //Asynchronous Programming
 //using callback
-function fetchData(callback) {
-  setTimeout(() => {
-    let data = "some data from he server";
-    callback(data);
-  }, 2000);
-}
+// function fetchData(callback) {
+//   setTimeout(() => {
+//     let data = "some data from he server";
+//     callback(data);
+//   }, 2000);
+// }
 
-fetchData((data) => {
-  console.log(data);
-});
+// fetchData((data) => {
+//   console.log(data);
+// });
 
 // // Using Promises
 // function fetchData() {
@@ -255,15 +256,20 @@ fetchData((data) => {
 
 // getData();
 // Classes and Object-Oriented Programming (OOP)  -->
-class parv {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-  greet() {
-    console.log(`hello my name is ${this.name} and i am ${this.age} year old`);
-  }
-}
+// class parv {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   greet() {
+//     console.log(`hello my name is ${this.name} and i am ${this.age} year old`);
+//   }
+// }
 
-const mia = new person("Mia", 30);
-john.greet();
+// const mia = new ("Mia", 30)();
+// john.greet();
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
