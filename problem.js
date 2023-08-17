@@ -34,3 +34,14 @@ if (givenNumber > 10) {
 for (i = 1; i < 6; i++) {
   console.log("this is counting :", i);
 }
+
+/* Create a function called 'greet' that takes a name as a parameter and returns 
+a greeting message like "Hello, [name]!".
+ */
+
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+let greeting = greet("Parv");
+console.log(greeting);
