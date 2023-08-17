@@ -268,8 +268,65 @@ console.log(fut);
 
 // const mia = new ("Mia", 30)();
 // john.greet();
-for (let i = 0; i < 5; i++) {
-  setTimeout(() => {
-    console.log(i);
-  }, 1000);
+
+// inheritance and prototype
+// class Student extends Person {
+//   constructor(name, age, grade) {
+//     super(name, age);
+//     this.grade = grade;
+//   }
+//   study() {
+//     console.log(`${this.name} .is studying`);
+//   }
+// // }
+
+// const alice = new Student("Alice", 18, 22);
+// alice.greet();
+// alice.study();
+
+// closures
+function outer() {
+  let outerVar = "I am From The Function";
+
+  function inner() {
+    console.log(outerVar);
+  }
+  return inner;
 }
+
+const innerFunction = outer();
+innerFunction();
+
+console.log(add(3, 5));
+
+// error handling
+
+try {
+  // Code that might throw an error
+  let result = 10 / 0;
+} catch (error) {
+  console.error("An error occurred:", error);
+}
+
+// LocalStorage and SessionStorage
+localStorage.setItem("username", "john_doe");
+
+// Retrieving data from LocalStorage
+let username = localStorage.getItem("username");
+
+// Removing data from LocalStorage
+localStorage.removeItem("username");
+
+// Using Fetch API to make a GET request
+// fetch("https://api.example.com/data")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.error("Error:", error));
+
+// Event delegation example
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("button")) {
+    // Handle button click
+    // this is used to change icon like i click on button and you want to change it
+  }
+});
