@@ -1,6 +1,6 @@
 # Learning Basics of JavaScript
 
-![website](console.png)
+<img src=console.png>
 
 Welcome to the Learning Basics of JavaScript GitHub project! This repository is designed to help you grasp the foundational concepts of JavaScript programming. Whether you're an absolute beginner or looking to refresh your skills, this project provides comprehensive resources to get you started on your JavaScript journey.
 
