@@ -330,3 +330,78 @@ document.addEventListener("click", function (event) {
     // this is used to change icon like i click on button and you want to change it
   }
 });
+
+//Asynchronous Programming Patterns
+fs.readFile("file1.txt", (err, data1) => {
+  if (err) {
+    console.error(err);
+  } else {
+    fs.readFile("file2.txt", (err, data2) => {
+      if (err) {
+        console.error(err);
+      } else {
+        // Process data1 and data2
+      }
+    });
+  }
+});
+
+//
+function readFileAsync(filename) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(filename, "utf8", (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+}
+
+readFileAsync("file1.txt")
+  .then((data1) => readFileAsync("file2.txt"))
+  .then((data2) => {
+    // Process data1 and data2
+  })
+  .catch((err) => console.error(err));
+
+//
+async function readFiles() {
+  try {
+    const data1 = await readFileAsync("file1.txt");
+    const data2 = await readFileAsync("file2.txt");
+    // Process data1 and data2
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+readFiles();
+
+// Modules and Module Systems
+export function add(a, b) {
+  return a + b;
+}
+
+//This keyword
+
+const parvg = {
+  name: "parvg",
+  greet: function () {
+    console.log(`Hello, my name is ${this.name}.`);
+  },
+};
+
+parvg.greet();
+
+/**In a global context, this refers to the global object (e.g., window in browsers).
+In an object method, this refers to the object itself.
+In an event handler or callback function, this may have a different context.
+You can also explicitly bind this using functions like bind, call, or apply. */
+
+// AJAX and Fetch
+// fetch("https://api.example.com/data")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.error("Error:", error));
